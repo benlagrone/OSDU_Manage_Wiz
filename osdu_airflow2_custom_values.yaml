@@ -1,0 +1,18 @@
+azure:
+  tenant: 
+  subscription: 
+  resourcegroup: -rg
+  identity: -osdu-identity
+  identity_id: 
+  keyvault: 
+  appid: 
+
+airflow:
+  version_1_Installed: false
+  image:
+    repository: osduacr.azurecr.io/airflow2-docker-image
+    tag: v2.2.4-v0.26-20240422-062619
+  config:
+    AIRFLOW__SCHEDULER__STATSD_HOST: "appinsights-statsd"
+    AIRFLOW__SCHEDULER__STATSD_PORT: 8125
+    AIRFLOW__WEBSERVER__BASE_URL: https://yourdomain.com/airflow2

@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: osdu-ingress
+  namespace: osdu
+spec:
+  rules:
+  - host: {{DNS_HOST}}  # Replace this placeholder in the script with your domain
+    http:
+      paths:
+      - path: /entitlements
+        pathType: Prefix
+        backend:
+          service:
+            name: entitlements-service
+            port:
+              number: 80
+      - path: /storage
+        pathType: Prefix
+        backend:
+          service:
+            name: storage-service
+            port:
+              number: 80

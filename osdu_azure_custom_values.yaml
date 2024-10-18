@@ -1,0 +1,21 @@
+global:
+  replicaCount: 2
+  azure:
+    tenant: 
+    subscription: 
+    resourcegroup: -rg
+    identity: -osdu-identity
+    identity_id: 
+    keyvault: 
+    appid: 
+    podIdentityAuthEnabled: false
+    oidAuthEnabled: true
+    corsEnabled: true
+    suthEnabled: false
+    service_account_id: 
+    service_account_oid: 
+
+  ingestion:
+    airflowVersion2Enabled: true
+    osduAirflowURL: http://airflow2-web.airflow2.svc.cluster.local:8080/airflow2
+    airflowDbName: airflow2
